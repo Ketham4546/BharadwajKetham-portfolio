@@ -1,0 +1,556 @@
+/* General Styles */
+body {
+    font-family: 'Consolas', Monospace;
+    background-color: #1b1b1b;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #0f0f0f;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 8px 16px;
+    transition: background 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Home Section */
+.home {
+    background: url(../Images/image-from-rawpixel-id-12877167-png.png) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px; /* Reduced padding at the top */
+    height: 100vh; /* Ensure it fills the full viewport height */
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.home-text {
+    max-width: 600px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.home-text h1 {
+    font-size: 4em;
+    color: #d0b100;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+.home-text h2 {
+    font-size: 2em;
+    color: #dce766;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    font-size: 1.2em;
+    color: #e0e0e0;
+}
+
+.home-image img {
+    border-radius: 50%;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 4px solid #d0b100;
+}
+
+/* Scroll Down Button */
+.scroll-down {
+    position: absolute;
+    bottom: 90px; /* Pulled up slightly */
+    width: 100%;
+    text-align: center;
+}
+
+.scroll-down a {
+    color: #d0b100;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.scroll-down a:hover {
+    color: #d0b100;
+}
+
+.scroll-down .arrow {
+    font-size: 2em;
+    color: #d0b100;
+    margin-top: 5px;
+    animation: bounce 2s infinite;
+}
+
+/* Bounce Animation for the Arrow */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+/* Section-Specific Styles */
+.about {
+    background-color: #1b1b1b;
+}
+
+.projects {
+    background-color: #222;
+}
+
+.publications {
+    background-color: #1b1b1b;
+}
+
+.contact {
+    background-color: #222;
+}
+
+/* Content Styling */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #f5ba13;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #f5ba13;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #ccc;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+/* Card Styling for Projects and Publications */
+.project-card, .publication-card {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.project-card:hover, .publication-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Additional styling for text elements in the project card */
+.project-card h2 {
+    font-size: 1.4em; /* Adjust the title size as needed */
+    color: #d0b100; /* Optional: Customize the color */
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1.1em; /* Adjust the description size as needed */
+    color: #fff; /* Optional: Customize the color */
+    line-height: 1.6;
+}
+
+/* Additional styling for text elements in the project card */
+.publication-card h2 {
+    font-size: 1.4em; /* Adjust the title size as needed */
+    color: #f5e589; /* Optional: Customize the color */
+    margin-bottom: 15px;
+}
+
+.publication-card p {
+    font-size: 0.7em; /* Adjust the description size as needed */
+    color: #fff; /* Optional: Customize the color */
+    line-height: 1.6;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 60px;
+    border-radius: 10 px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+input, textarea {
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+input[type="submit"] {
+    background-color: #d0b100;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #dce766;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #0f0f0f;
+    color: #e0e0e0;
+}
+
+
+/* Skills Section */
+.skills {
+    background-color: #1c1c1e; /* Dark theme background */
+    text-align: center;
+    padding: 50px 20px;
+    color: #fff;
+    position: relative;
+}
+
+/* Skills Title Positioned at the Top */
+.skills h2 {
+    font-size: 3em;
+    color: #d0b100;
+    position: relative; /* Place it at the top */
+    top: 0; /* Adjusts how far from the top */
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+/* Skills Section Styling */
+.skills-section {
+    padding: 40px;
+    background-color: #222;
+}
+
+/* Skills Container Styling */
+.skills-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    position: relative;
+}
+
+/* Wrapper for the Skill Categories */
+.skills-wrapper {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Skill Bubble Styling */
+.skill-category {
+    min-width: 250px;
+    height: 250px;
+    background-color: #444;
+    padding: 30px;
+    border-radius: 50%;
+    text-align: center;
+    color: #f0f0f0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Skill Floating Animation */
+.skill-bubble {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Skill Item Styling */
+.skill-item {
+    display: inline-flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the text with the icon */
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Skill Icon Styling */
+.skill-item img {
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    margin-bottom: 10px; /* Reduced spacing between icon and text */
+}
+
+.skill-item span {
+    font-size: 0.9em;
+    color: #f0f0f0;
+}
+
+/* Font Styling */
+.skill-category h3 {
+    font-size: 1.2em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.skill-category span {
+    font-size: 0.9em;
+}
+
+/* Animation */
+.skill-bubble {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+
+/* Horizontal scrolling container styling */
+.skills-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.skills-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+/* Skills Bubble Animation */
+.skill-bubble {
+    transition: transform 0.3s ease;
+    background-color: #444;
+    border-radius: 20px; /* Making the container box with no sharp edges */
+    width: 250px; /* Increased width */
+    height: 400px; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+}
+
+/* Skill Name Styling */
+.skill-name {
+    font-size: 1em;
+    color: #d0b100; /* Customize the color as needed */
+    margin-bottom: 8px; /* Space below the skill name */
+    text-align: center;
+}
+
+/* Animation on hover */
+.skill-bubble:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* Continuous motion effect */
+@keyframes bubbleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Example: Scale Effect */
+.scale-effect {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Resume Section */
+.resume {
+    background-color: #1c1c1e; /* Dark theme background */
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.resume h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #d0b100;
+}
+
+.resume-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.resume-item {
+    background-color: #2c2c2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: center;
+}
+
+.resume-item h3 {
+    font-size: 1.5em;
+    color: #d0b100;
+    margin-bottom: 20px;
+}
+
+/* Style for iframe */
+.resume-item iframe {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Download button styling */
+.download-btn {
+    background-color: #d0b100;
+    color: #1c1c1e;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+/* About Section Styling */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+/* Social Links Styling */
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+
+
+.publication-link {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Keep the original text color */
+}
+
+.publication-link .publication-card {
+    cursor: pointer; /* Change cursor to indicate a clickable area */
+}
+
+
+
